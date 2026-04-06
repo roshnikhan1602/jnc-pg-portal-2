@@ -1,0 +1,128 @@
+/* ===== THEME ===== */
+:root {
+  --primary: #2f2f6f;
+  --primary-light: #4a4aa3;
+  --bg: #f4f6fb;
+  --text: #222;
+  --card: #ffffff;
+}
+
+/* ===== PAGE ===== */
+.about-page {
+  background: var(--bg);
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text);
+}
+
+/* ===== HERO ===== */
+.about-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  white-space: pre-line;
+}
+
+/* ===== SECTION ===== */
+.about-section {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.about-section h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== HIGHLIGHTS ===== */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.highlight-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== COORDINATOR ===== */
+.coordinator-section {
+  margin-top: 50px;
+}
+
+.coordinator-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.coordinator-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* INFO */
+.coordinator-info h3 {
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
+.role {
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .coordinator-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .coordinator-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-hero h1 {
+    font-size: 28px;
+  }
+}

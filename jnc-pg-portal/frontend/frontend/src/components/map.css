@@ -1,0 +1,14 @@
+.map-container {
+  margin: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.map-container h3 {
+  margin-bottom: 10px;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

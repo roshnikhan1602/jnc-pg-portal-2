@@ -1,0 +1,23 @@
+.placements-layout {
+  display: flex;
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.placements-content {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.placements-content h2 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.placements-content p {
+  line-height: 1.6;
+  color: #444;
+}

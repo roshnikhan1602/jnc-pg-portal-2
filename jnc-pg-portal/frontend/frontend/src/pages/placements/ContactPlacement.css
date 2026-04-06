@@ -1,0 +1,80 @@
+.contact-page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #f5f7fa, #e4ecf7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 32px;
+  color: #1a2a44;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card h2 {
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.designation {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.department {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #374151;
+}
+
+.contact-details span {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-container h1 {
+    font-size: 24px;
+  }
+}

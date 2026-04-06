@@ -1,0 +1,25 @@
+.placement-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  border-left: 5px solid #1e3a8a;
+  transition: 0.2s ease;
+}
+
+.placement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.placement-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.placement-card p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 14px;
+}

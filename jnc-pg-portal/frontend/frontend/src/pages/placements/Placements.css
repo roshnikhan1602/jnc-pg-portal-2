@@ -1,0 +1,179 @@
+/* Page wrapper */
+.placements-page {
+  padding: 10px 20px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Inner container */
+.placements-list-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 80px; /* keeps cards slightly toward left like your layout */
+}
+
+/* Title */
+.placements-title {
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 10px 0;   /* less space below title */
+  color: #1e3a8a;
+}
+
+/* FILTER BAR */
+.placements-filters {
+  display: flex;
+  justify-content: flex-end;   /* moves filters to right */
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-right: 40px;
+}
+
+.placements-filters select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #1d4ed8;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.placements-filters select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.2);
+}
+
+/* Cards list */
+.placements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Placement card */
+.placement-card {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  width: 240px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.placement-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Student name */
+.student-name {
+  color: #1d4ed8;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Each row (label + value) */
+.placement-row {
+  display: flex;
+  gap: 6px;
+  font-size: 15px;
+  color: #444;
+}
+
+.placement-row span {
+  display: block;
+  text-align: left;
+}
+
+.placement-row span:last-child {
+  color: #222;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+  .placements-list-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .placements-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .placements-filters {
+    justify-content: center;  /* center filters on small screens */
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .placement-card {
+    width: 100%;
+  }
+}
+
+  .placement-row span:first-child {
+    color: #666;
+  }
+
+/* FILTER BAR */
+.placements-filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.placements-filters select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #1d4ed8;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.placements-filters select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.2);
+}
+/* HEADER: title left, filters right */
+/* .placements-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+} */
+
+/* FILTER BAR */
+.placements-filters {
+  display: flex;
+  gap: 15px;
+}
+
+.placements-filters select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #1d4ed8;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.placements-filters select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.2);
+}

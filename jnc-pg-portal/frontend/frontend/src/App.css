@@ -1,0 +1,1704 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f6fb;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+/* ===== DASHBOARD LAYOUT ===== */
+.dashboard-layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* ===== LEFT PANEL ===== */
+.left-panel {
+  width: 30%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.left-panel h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2f2f6f;
+}
+
+/* ===== INPUTS ===== */
+.left-panel input,
+.left-panel textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.left-panel textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* ===== BUTTON ===== */
+.left-panel button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2f2f6f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.left-panel button:hover {
+  background-color: #1f1f4f;
+}
+
+/* ===== RIGHT PANEL ===== */
+.right-panel {
+  width: 70%;
+}
+
+/* ===== EVENT CARD ===== */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  border-left: 5px solid #2f2f6f;
+}
+
+.card h4 {
+  margin: 0 0 5px;
+  color: #2f2f6f;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.card a {
+  color: #2f2f6f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+}
+
+/* ===== CARD ACTIONS ===== */
+.card-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background-color: #a91f1f;
+}
+
+/* ===== ANNOUNCEMENTS ===== */
+.announcement-card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border-left: 4px solid #2f2f6f;
+  box-shadow: 0 0 6px rgba(0,0,0,0.06);
+}
+
+.announcement-card h4 {
+  margin: 0 0 6px;
+  color: #2f2f6f;
+}
+
+.announcement-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+}
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background-color: #1f3c88; /* 🔵 Professional blue */
+  color: white;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left a {
+  color: white;
+  margin-right: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-left a:hover {
+  text-decoration: underline;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+}
+
+.logo-img {
+  height: 35px;
+  width: auto;
+}
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-edit {
+  background: #2563eb;
+  color: white;
+  padding: 6px 12px;
+}
+
+.btn-delete {
+  background: #dc2626;
+  color: white;
+  padding: 6px 12px;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+}
+/* ===== FACULTY PAGE DELETE BUTTON (MAROON) ===== */
+.right-panel .card-actions button:last-child {
+  background-color: #800000; /* maroon */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.right-panel .card-actions button:last-child:hover {
+  background-color: #5a0000;
+}
+/* ===== STUDENT ANNOUNCEMENT SCROLL ===== */
+.announcement-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.announcement-scroll .announcement-card {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+.gallery-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.gallery-scroll img {
+  height: 140px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.gallery-slider {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 15px;
+}
+
+.gallery-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.gallery-slide img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.gallery-slide img:hover {
+  transform: scale(1.05);
+}
+.gallery-card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.gallery-row img {
+  height: 140px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-row img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-actions {
+  margin-top: 10px;
+}
+
+.gallery-actions button {
+  margin-right: 10px;
+}
+
+/* IMAGE POPUP */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* EDIT MODAL */
+.edit-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+/* =============================
+   EVENT CARD (FINAL FIX)
+============================= */
+.event-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #d63384;
+}
+
+.event-card h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #1f2a6d;
+}
+
+.event-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.event-card .meta {
+  font-size: 12px;
+  color: gray;
+  margin-top: 6px;
+}
+
+.event-card a {
+  color: #1f2a6d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.event-card .card-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+/* =============================
+   EVENT CARD (FINAL FIX)
+============================= */
+.event-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #2f2f6f;
+  box-shadow: 0 0 6px rgba(0,0,0,0.06);
+}
+
+
+.event-card h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #1f2a6d;
+}
+
+.event-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.event-card .meta {
+  font-size: 12px;
+  color: gray;
+  margin-top: 6px;
+}
+
+.event-card a {
+  color: #1f2a6d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.event-card .card-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+
+/* //reetha */
+
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+} */
+
+/* Background */
+.login-page {
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.login-card {
+  background: #ffffff;
+  width: 380px;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+.login-card h1 {
+  margin: 0;
+  color: #1e3c72;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.login-card label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-card select,
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.login-card input:focus,
+.login-card select:focus {
+  outline: none;
+  border-color: #1e3c72;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer */
+.footer-text {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: #888;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= ADMIN DASHBOARD ================= */
+
+.dashboard-container {
+  padding: 40px;
+  background: #f4f6ff;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 30px;
+}
+
+.dept-card {
+  background: #ffffff;
+  border: 2px solid #2d4cff;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.dept-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.dept-title {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.dept-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.primary-btn {
+  background: #0a74ff;
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ---------- POSTGRADUATE DETAILS PAGE ---------- */
+
+.pg-container {
+  padding: 30px 60px;   /* keep spacing */
+  max-width: 100%;      /* 🔥 REMOVE restriction */
+}
+.pg-header {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e3c72; /* match your login gradient theme */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.vm-card {
+  background: #f0f4ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.card-gradient-alt {
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.vm-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.section-gradient {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text; /* Chrome, Safari */
+  -webkit-text-fill-color: transparent; /* Chrome, Safari */
+  background-clip: text; /* fallback for other browsers */
+  color: transparent; /* fallback */
+}
+
+
+.list-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.list-card li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+/* ================= PUBLIC FEE STRUCTURE (CREATIVE) ================= */
+
+/* Modal heading */
+.modal-box h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1e3c72;
+  text-align: center;
+}
+
+/* Each course block */
+.modal-box > div > strong {
+  display: block;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #0a74ff;
+  text-align: center;
+}
+
+/* Remove default bullets */
+.modal-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 10px;
+  max-width: 360px;
+}
+
+/* Fee row card */
+.modal-box ul li {
+  background: linear-gradient(135deg, #eef2ff, #f8faff);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.modal-box ul li:hover {
+  transform: translateY(-3px);
+}
+
+/* Fee label */
+.modal-box ul li::before {
+  content: "₹";
+  font-weight: bold;
+  color: #1e40af;
+  margin-right: 6px;
+  display: none;
+}
+
+/* Fee text split */
+.modal-box ul li {
+  color: #1f2937;
+}
+
+/* Close button styling */
+.modal-box button {
+  margin-top: 15px;
+  padding: 10px 26px;
+  border-radius: 8px;
+  border: none;
+  background: #1e3c72;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-box button:hover {
+  background: #16305f;
+}
+
+/* ========== CREATIVE FEE STRUCTURE BUTTON (PUBLIC DASHBOARD) ========== */
+
+.info-btn {
+  position: relative;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 2px solid #2563eb;
+  background: linear-gradient(135deg, #ffffff, #eef4ff);
+  color: #1e40af;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* subtle shine effect */
+.info-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(37, 99, 235, 0.15),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+/* hover animation */
+.info-btn:hover::before {
+  left: 100%;
+}
+
+.info-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+/* click feedback */
+.info-btn:active {
+  transform: scale(0.97);
+}
+
+/* ACTION GRID */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.action-box {
+  border: 2px solid #1e40af;
+  background: #ffffff;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.action-box:hover {
+  background: #1e40af;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-box h3 {
+  margin-bottom: 20px;
+  color: #1e3c72;
+}
+
+.modal-list {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.modal-list li {
+  margin-bottom: 10px;
+}
+
+.modal-box button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: none;
+  background: #1e3c72;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.apply-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.apply-card {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.apply-card h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.apply-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 12px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.research-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.research-box {
+  background: #f9fafb;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #1e40af;
+}
+
+.research-stats {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.research-stats div {
+  background: #1e3a8a;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.research-page {
+  padding: 40px 80px;
+}
+
+.research-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.research-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  color: #e91e63;
+  font-weight: 700;
+  margin: 40px 0 20px;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+  justify-content: center;
+  gap: 25px;
+
+  align-items: start;   /* 🔥 VERY IMPORTANT */
+}
+
+.guide-card {
+  max-width: 300px;
+  padding: 12px;        /* 🔥 smaller padding */
+  border-radius: 12px;
+  text-align: center;
+}
+.guide-card img {
+  width: 100%;
+  height: 180px;        /* 🔥 reduced from 240/260 */
+  object-fit: contain;  /* full image visible */
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.guide-card h4 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.guide-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.view-btn {
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.scholar-list {
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+.research-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.research-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.research-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* underline divider like screenshot */
+.research-header h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #8b0000; /* dark maroon */
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Research Page Full Background ===== */
+.research-page {
+  background: #e9e4e4;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* ===== Purple Header Section ===== */
+.research-header {
+  background: #3b2d6b;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ===== Page Content Spacing ===== */
+.research-page p,
+.research-page h2,
+.research-page h3,
+.research-page ol {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* ===== Intro Paragraph ===== */
+.research-page p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ===== Section Titles ===== */
+.research-page h2,
+.research-page h3 {
+  color: #e91e63;
+  margin-bottom: 25px;
+}
+
+/* ===== Guide Grid ===== */
+.guide-grid {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* ===== Scholar List ===== */
+.research-page ol {
+  margin-bottom: 40px;
+}
+
+/* View Details Button - Red Only */
+.guide-card button {
+  background-color: #e91e63;  /* red/pink shade like screenshot */
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+.guide-card button:hover {
+  background-color: #c2185b;  /* darker red on hover */
+}
+
+/* HEADER */
+.guide-header {
+  background-color: #3b2d6b;
+  color: #fff;
+  padding: 20px 90px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* PROFILE */
+.guide-profile {
+  display: flex;
+  gap: 40px;
+  padding: 50px 90px;
+  background: #fff;
+}
+
+.guide-profile img {
+  width: 260px;
+  border: 1px solid #ccc;
+}
+
+.guide-profile-right h2 {
+  margin-bottom: 5px;
+}
+
+.guide-profile-right h4 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+/* DEGREE TABLE */
+.degree-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.degree-table th,
+.degree-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* EXPERIENCE BOX */
+.experience-box {
+  background: #f6f6f6;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+/* SECTIONS */
+.guide-section {
+  margin: 25px 90px;
+  border: 1px solid #3b2d6b;
+}
+
+.guide-section-title {
+  background: #3b2d6b;
+  color: white;
+  padding: 12px 15px;
+  font-weight: 600;
+}
+
+.guide-section-body {
+  background: white;
+  padding: 20px;
+}
+
+.guide-section-body ul {
+  padding-left: 20px;
+}
+
+.guide-section-body li {
+  margin-bottom: 8px;
+}
+
+/* 🌟 RESET */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #eef2ff, #f1f5f9);
+}
+
+/* 🌟 HERO SECTION (FIXED SPACE) */
+.hero-section {
+  text-align: center;
+  padding: 20px 20px 5px;   /* 🔥 reduced space */
+  margin-bottom: 10px;
+}
+
+.hero-section h1 {
+  font-size: 28px;          /* slightly smaller */
+  color: #1e3c72;
+  margin-bottom: 5px;
+}
+
+.hero-section p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 🌟 GRID (LESS SPACE) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px 40px;   /* 🔥 reduced */
+}
+
+.dept-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;   /* 🔥 reduced */
+
+  text-align: center;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ✨ HOVER */
+.dept-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌟 ICON */
+.dept-icon {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.dept-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  min-height: 48px;   /* 🔥 forces equal height */
+}
+
+/* 🌟 BUTTONS */
+.dept-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* 🌟 PRIMARY BUTTON */
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* 🌟 APPLY BUTTON */
+.apply-btn {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+/* 🔥 Expandable Fee Section */
+.fee-expand {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f8fafc;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Title */
+.fee-title {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* Course block */
+.fee-course {
+  margin-bottom: 10px;
+}
+
+/* Each fee row */
+.fee-item {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* Button style */
+.info-btn {
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESEARCH CENTER (RESTORED) ================= */
+
+.research-container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Title */
+.research-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1e3c72;
+}
+
+/* Description */
+.research-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: justify;
+  color: #333;
+}
+
+/* Section heading */
+.section-heading {
+  color: #e91e63;
+  font-weight: 700;
+  margin: 40px 0 20px;
+}
+
+/* Stats boxes */
+.research-stats {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.research-stats div {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 120px;
+  font-weight: bold;
+}
+
+/* Guide grid */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Guide card */
+.guide-card {
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Guide image */
+.guide-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Button */
+.view-btn {
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.view-btn:hover {
+  background: #c2185b;
+}
+
+/* FULL PAGE WIDTH */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0 40px;   /* space inside */
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* 🔥 smaller min size = more cards per row */
+
+  gap: 30px;
+
+  max-width: 1200px;   /* 🔥 controls layout width */
+  margin: 0 auto;      /* 🔥 center perfectly */
+  padding: 20px;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.hero {
+  height: 300px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("./images/College.jpg"); /* ✅ correct */
+}
+  
+.hero-overlay {
+  text-align: center;
+  color: white;
+}
+
+/* ===== FACULTY DASHBOARD LAYOUT ===== */
+
+.faculty-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7ff;
+}
+
+/* SIDEBAR */
+.faculty-sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.menu li:hover,
+.menu .active {
+  background: rgba(255,255,255,0.2);
+}
+
+/* MAIN */
+.faculty-main {
+  flex: 1;
+  padding: 30px;
+}
+
+/* TOP CARDS */
+.faculty-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.faculty-cards .card {
+  flex: 1;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* GRID FIX (smaller cards for dashboard look) */
+.faculty-main .grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.content-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.chart-controls select {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.chart-controls button {
+  background: #1e3c72;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.content-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.chart-controls select {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.chart-controls button {
+  background: #1e3c72;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.content-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.admin-page {
+  padding: 40px 80px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.admin-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.admin-section h3 {
+  margin-bottom: 15px;
+  color: #1e3c72;
+}
+
+.admin-section input,
+.admin-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.admin-section textarea {
+  min-height: 100px;
+}
+
+.save-btn {
+  background: #16a34a;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+

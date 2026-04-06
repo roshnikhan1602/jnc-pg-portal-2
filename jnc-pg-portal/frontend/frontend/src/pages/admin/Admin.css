@@ -1,0 +1,549 @@
+.admin-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.form-section {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-section h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.placement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.placement-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.placement-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.placement-form button:hover {
+  background: #0056b3;
+}
+
+/* RIGHT SIDE */
+.list-section {
+  flex: 2;
+}
+
+.list-section h2 {
+  margin-bottom: 15px;
+}
+
+.placement-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.actions button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+/* Gallery Admin Section */
+.gallery-admin-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+}
+
+/* 🔥 Make image smaller */
+.gallery-admin-item img {
+  width: 90px;          /* smaller width */
+  height: 65px;         /* smaller height */
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Text section in middle */
+.gallery-admin-item div {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Buttons on right side */
+.gallery-admin-item button {
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gallery-admin-item button:first-of-type {
+  background-color: #3498db;
+  color: white;
+}
+
+.gallery-admin-item button:last-of-type {
+  background-color: #e74c3c;
+  color: white;
+}
+
+
+
+
+
+
+/* ===== ROOT THEME ===== */
+:root {
+  --primary: #2f2f6f;
+  --primary-light: #4a4aa3;
+  --bg: #f5f6fa;
+  --card: #ffffff;
+  --text: #222;
+  --border: #e0e0e0;
+}
+
+/* ===== WRAPPER ===== */
+.admin-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  background: var(--bg);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== LEFT PANEL ===== */
+.form-section {
+  flex: 1;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== RIGHT PANEL ===== */
+.list-section {
+  flex: 1;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* ===== HEADINGS ===== */
+h2, h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* ===== FORM ===== */
+.placement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* INPUTS */
+.placement-form input,
+.placement-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.placement-form input:focus,
+.placement-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(47, 47, 111, 0.15);
+}
+
+/* BUTTON */
+.placement-form button {
+  background: #2f2f6f;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.placement-form button:hover {
+  background: var(--primary-light);
+}
+
+/* ===== CARDS ===== */
+.placement-card {
+  background: #fafafa;
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.placement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px #2f2f6f;
+}
+
+/* ACTION BUTTONS */
+.actions button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.actions button:first-child {
+  background: #ffc107;
+  color: #2f2f6f;
+}
+
+.actions button:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+/* ===== GALLERY ===== */
+.gallery-admin-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+.gallery-admin-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-admin-item button {
+  margin-left: auto;
+  margin-right: 5px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-admin-item button:first-of-type {
+  background: #ffc107;
+  color: white;
+}
+
+.gallery-admin-item button:last-of-type {
+  background: #dc3545;
+  color: white;
+}
+
+/* ===== SCROLLBAR ===== */
+.list-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list-section::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* ===== HR ===== */
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .admin-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/* ===== WRAPPER ===== */
+.training-wrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== CARD ===== */
+.training-card {
+  width: 100%;
+  max-width: 750px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===== HEADINGS ===== */
+.training-card h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.training-card h3 {
+  margin-top: 20px;
+  color: var(--primary);
+}
+
+.training-card h4 {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* ===== FORM ===== */
+.training-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* LABEL */
+.training-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* INPUT + TEXTAREA */
+.training-form input,
+.training-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* FOCUS EFFECT */
+.training-form input:focus,
+.training-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(47, 47, 111, 0.15);
+}
+
+/* TEXTAREA HEIGHT */
+.training-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ===== YEAR BLOCK ===== */
+.year-block {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* ===== BUTTON ===== */
+.primary-btn {
+  margin-top: 15px;
+  background: #2f2f6f;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .training-card {
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+
+/* ===== WRAPPER ===== */
+.about-wrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== CARD ===== */
+.about-card {
+  width: 100%;
+  max-width: 750px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===== HEADINGS ===== */
+.about-card h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.about-card h3 {
+  margin-top: 20px;
+  color: var(--primary);
+}
+
+/* ===== FORM ===== */
+.about-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* LABEL */
+.about-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* INPUTS */
+.about-form input,
+.about-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* FOCUS */
+.about-form input:focus,
+.about-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(47, 47, 111, 0.15);
+}
+
+/* TEXTAREA */
+.about-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ===== GRID ===== */
+.coordinator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ===== BUTTON ===== */
+.primary-btn {
+  margin-top: 15px;
+  background: #2f2f6f;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .coordinator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 15px;
+  }
+}

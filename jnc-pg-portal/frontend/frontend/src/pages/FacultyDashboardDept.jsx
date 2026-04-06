@@ -13,7 +13,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 /* ================= API ================= */
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
   withCredentials: true,
 });
 
@@ -263,8 +263,8 @@ useEffect(() => {
                     g.image?.startsWith("http")
                       ? g.image
                       : g.image?.startsWith("/uploads")
-                      ? `http://localhost:3000${g.image}`
-                      : `http://localhost:3000/uploads/${g.image}`
+                      ? `${import.meta.env.VITE_API_URL}${g.image}`
+                      : `${import.meta.env.VITE_API_URL}/uploads/${g.image}`
                   }
                   alt={g.name}
                   onError={(e) => (e.target.src = "/avatar.png")}

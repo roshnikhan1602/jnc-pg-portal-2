@@ -4,7 +4,7 @@ export default function PlacementAbout() {
   const [about, setAbout] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/placement-about")
+    fetch(`${import.meta.env.VITE_API_URL}/api/placement-about`)
       .then(res => res.json())
       .then(data => setAbout(data));
   }, []);
@@ -39,7 +39,7 @@ return (
 
       <div className="coordinator-card">
         <img
-          src={`http://localhost:3000/${about.coordinator.image}`}
+          src={`${import.meta.env.VITE_API_URL}/${about.coordinator.image}`}
           alt={about.coordinator.name}
         />
 

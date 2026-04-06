@@ -4,7 +4,7 @@ import axios from "axios";
 
 /* ================= API ================= */
 const api = axios.create({
-  baseURL: "http://localhost:3000/api", // FIXED
+  baseURL: `${import.meta.env.VITE_API_URL}/api`, // FIXED
   withCredentials: true,
 });
 

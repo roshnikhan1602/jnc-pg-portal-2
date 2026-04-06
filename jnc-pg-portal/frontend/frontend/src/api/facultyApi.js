@@ -4,7 +4,7 @@ export const facultyApi = createApi({
   reducerPath: "facultyApi",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/api",
+    baseURL: `${import.meta.env.VITE_API_URL}/api`,
     credentials: "include",
   }),
 

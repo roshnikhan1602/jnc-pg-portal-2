@@ -92,7 +92,7 @@ export default function FacultyEditProfile() {
         <img
           src={
             form.image
-              ? `http://localhost:3000/uploads/${form.image}`
+              ? `${import.meta.env.VITE_API_URL}/uploads/${form.image}`
               : "/avatar.png"
           }
           className="w-32 h-32 rounded mb-2"

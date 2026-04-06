@@ -36,8 +36,8 @@ const navigate = useNavigate();
 
     const loadData = async () => {
     try {
-      const ev = await fetch("http://localhost:3000/api/events");
-      const an = await fetch("http://localhost:3000/api/announcements");
+      const ev = await fetch(`${import.meta.env.VITE_API_URL}/api/events`);
+      const an = await fetch(`${import.meta.env.VITE_API_URL}/api/announcements`);
 
       const evData = await ev.json();
       const anData = await an.json();

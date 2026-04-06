@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./Researchguidecardcss.css"
 /* ================= CONFIG ================= */
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = `${import.meta.env.VITE_API_URL}`;
 
 export default function ResearchGuideCard({ guide, dept }) {
   const navigate = useNavigate();

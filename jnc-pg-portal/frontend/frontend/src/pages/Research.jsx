@@ -5,7 +5,7 @@ import { slugToDepartmentMap } from "../utils/slugMap";
 
 /* ================= API ================= */
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
   withCredentials: true,
 });
 
@@ -52,11 +52,11 @@ export default function Research() {
 
     // already has /uploads
     if (image.startsWith("/uploads")) {
-      return `http://localhost:3000${image}`;
+      return `${import.meta.env.VITE_API_URL}${image}`;
     }
 
     // normal case (filename only)
-    return `http://localhost:3000/uploads/${image}`;
+    return `${import.meta.env.VITE_API_URL}/uploads/${image}`;
   };
 
   return (

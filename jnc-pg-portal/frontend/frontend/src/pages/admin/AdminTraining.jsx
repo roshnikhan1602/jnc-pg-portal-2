@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./admin.css"
-const API = "http://localhost:3000/api/training";
+const API = `${import.meta.env.VITE_API_URL}/api/api/training`;
 
 export default function AdminTraining() {
   const [id, setId] = useState(null);

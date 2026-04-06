@@ -6,7 +6,7 @@ export default function Training() {
   const [training, setTraining] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/training")
+    axios.get(`${import.meta.env.VITE_API_URL}/api/training`)
       .then(res => setTraining(res.data))
       .catch(err => console.error(err));
   }, []);

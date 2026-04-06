@@ -36,7 +36,7 @@ export default function FacultyProfile() {
           <img
             src={
               f.image
-                ? `http://localhost:3000/uploads/${f.image}?t=${Date.now()}`
+                ? `${import.meta.env.VITE_API_URL}/uploads/${f.image}?t=${Date.now()}`
                 : "/avatar.png"
             }
             className="w-full rounded mb-4"

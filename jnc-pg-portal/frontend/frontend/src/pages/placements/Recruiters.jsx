@@ -24,7 +24,7 @@ export default function Recruiters() {
           {logos.map((item) => (
             <div key={item._id} className="recruiter-card">
               <img
-                src={`http://localhost:3000${item.logo}`} // ✅ FIX
+                src={`${import.meta.env.VITE_API_URL}${item.logo}`} // ✅ FIX
                 alt="recruiter"
                 onError={(e) => (e.target.style.display = "none")}
               />

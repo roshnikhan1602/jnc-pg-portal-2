@@ -4,7 +4,7 @@ import axios from "axios";
 
 /* ================= API ================= */
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
   withCredentials: true,
 });
 
@@ -71,7 +71,7 @@ export default function GuideDetails() {
       <div className="guide-profile">
 
         <img
-          src={`http://localhost:3000${guide.image}`}
+          src={`${import.meta.env.VITE_API_URL}${guide.image}`}
           alt={guide.name}
         />
 

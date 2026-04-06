@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
   withCredentials: true,
 });
 
@@ -49,7 +49,7 @@ export default function AdminDashboardR() {
       alert("Failed");
     }
   };
-
+console.log(import.meta.env.VITE_API_URL);
   return (
     <div className="p-8 max-w-5xl mx-auto space-y-10">
 

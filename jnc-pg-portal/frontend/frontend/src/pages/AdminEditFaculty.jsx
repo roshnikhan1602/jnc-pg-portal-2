@@ -157,7 +157,7 @@ export default function AdminEditFaculty() {
           {facultyData?.image && (
             <div className="mb-3">
               <img
-                src={`http://localhost:3000/uploads/${facultyData.image}`}
+                src={`${import.meta.env.VITE_API_URL}/uploads/${facultyData.image}`}
                 className="w-32 h-32 rounded object-cover border shadow"
                 alt="Faculty"
               />

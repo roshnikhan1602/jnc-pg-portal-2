@@ -27,7 +27,7 @@ const FacultyCard = ({ faculty, onSelectFaculty }) => {
       <div className="w-full bg-white flex items-center justify-center p-4 rounded-t-lg">
         {faculty.image ? (
           <img
-            src={`http://localhost:3000/uploads/${faculty.image}`}
+            src={`${import.meta.env.VITE_API_URL}/uploads/${faculty.image}`}
             alt={faculty.name}
             className="max-h-[220px] max-w-[180px] object-contain"
           />

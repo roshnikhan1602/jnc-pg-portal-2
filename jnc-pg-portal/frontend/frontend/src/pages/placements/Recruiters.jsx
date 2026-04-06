@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Recruiters.css";
 
-const API = "http://localhost:3000/api/recruiters";
+const API = `${import.meta.env.VITE_API_URL}/api/recruiters`;
 
 export default function Recruiters() {
   const [logos, setLogos] = useState([]);

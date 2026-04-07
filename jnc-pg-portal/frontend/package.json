@@ -48,8 +48,5 @@
   "main": "eslint.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "engines": {
-  "node": "20.x"
-}
+  "license": "ISC"
 }
